@@ -35,9 +35,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <header id="header">
         <?php
         NavBar::begin([
-            'brandLabel' => Yii::$app->name,
+            'brandLabel' => '<img src="/img/logo.png" alt="Логотип" class="logo"> Корочки.есть',
             'brandUrl' => Yii::$app->homeUrl,
-            'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top']
+            'options' => ['class' => 'navbar-expand-md navbar-dark bg-primary fixed-top']
         ]);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav'],
@@ -86,11 +86,17 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </div>
     </main>
 
-    <footer id="footer" class="mt-auto py-3 bg-light">
+    <footer id="footer" class="mt-auto py-3 bg-primary bg-opacity-25">
         <div class="container">
-            <div class="row text-muted">
-                <div class="col-md-6 text-center text-md-start">&copy; My Company <?= date('Y') ?></div>
-                <div class="col-md-6 text-center text-md-end"><?= Yii::powered() ?></div>
+            <div class="row text-center justify-content-center gap-3">
+                <div class="d-flex justify-content-beetween align-items-center">
+                    <div class="d-flex gap-4 mess">
+                        <img src="/web/img/vk.png">
+                        <img src="/web/img/od.png">
+                        <img src="/web/img/tg.png">
+                    </div>
+                </div>
+                <div class="col-md-6 text-center pt-3 border-top border-light ">&copy; Корочки.есть <?= date('Y') ?></div>
             </div>
         </div>
     </footer>
@@ -99,3 +105,4 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 </html>
 <?php $this->endPage() ?>
+
